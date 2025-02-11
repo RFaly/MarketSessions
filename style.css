@@ -1,0 +1,173 @@
+body {
+    background-color: #1a1a1a;
+    color: #e0e0e0;
+    overflow: hidden;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    position: relative;
+}
+
+.container {
+    background-color: #262626;
+    padding: 20px;
+    border-radius: 10px;
+    margin-top: 20px;
+    z-index: 1;
+}
+
+h2, h4 {
+    color: #4CAF50;
+}
+
+.btn-secondary {
+    background-color: #333;
+    border-color: #444;
+}
+
+.btn-secondary:hover {
+    background-color: #444;
+    border-color: #555;
+}
+
+.btn-primary {
+    background-color: #4CAF50;
+    border-color: #45a049;
+}
+
+.btn-primary:hover {
+    background-color: #45a049;
+    border-color: #3d8b40;
+}
+
+.btn-danger {
+    background-color: #f44336;
+    border-color: #e53935;
+}
+
+.btn-danger:hover {
+    background-color: #e53935;
+    border-color: #d32f2f;
+}
+
+.list-group-item {
+    background-color: #333;
+    border-color: #444;
+    color: #e0e0e0;
+}
+
+.form-control, .form-select {
+    background-color: #333;
+    border-color: #444;
+    color: #e0e0e0;
+}
+
+.form-control:focus, .form-select:focus {
+    background-color: #444;
+    border-color: #555;
+    color: #e0e0e0;
+}
+
+.bg-light {
+    background-color: #333 !important;
+    color: #e0e0e0 !important;
+}
+
+.border {
+    border-color: #444 !important;
+}
+
+.display-4 {
+    color: #4CAF50;
+}
+
+/* Background Animation */
+.background-animation {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    z-index: 0;
+}
+
+.background-animation div {
+    position: absolute;
+    width: 15px;
+    height: 15px;
+    background: rgba(76, 175, 80, 0.7);
+    border-radius: 50%;
+    animation: move 3s linear infinite;
+}
+
+@keyframes move {
+    0% {
+        transform: translateY(0) scale(1);
+        opacity: 1;
+    }
+    50% {
+        transform: translateY(-100vh) scale(0.5);
+        opacity: 0.5;
+    }
+    100% {
+        transform: translateY(-200vh) scale(1);
+        opacity: 0;
+    }
+}
+
+/* Green Light Effect */
+.green-light {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 300px;
+    height: 300px;
+    background: radial-gradient(circle, rgba(76, 175, 80, 0.5), rgba(76, 175, 80, 0));
+    transform: translate(-50%, -50%);
+    animation: glow 3s ease-in-out infinite;
+}
+
+@keyframes glow {
+    0% {
+        opacity: 0.5;
+    }
+    50% {
+        opacity: 0.8;
+    }
+    100% {
+        opacity: 0.5;
+    }
+}
+
+/* Additional Animation */
+.background-animation::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 200px;
+    height: 200px;
+    background: rgba(76, 175, 80, 0.4);
+    border-radius: 50%;
+    transform: translate(-50%, -50%) scale(1);
+    animation: pulse 2s ease-in-out infinite;
+}
+
+@keyframes pulse {
+    0% {
+        transform: translate(-50%, -50%) scale(1);
+        opacity: 0.4;
+    }
+    50% {
+        transform: translate(-50%, -50%) scale(1.2);
+        opacity: 0.6;
+    }
+    100% {
+        transform: translate(-50%, -50%) scale(1);
+        opacity: 0.4;
+    }
+}
